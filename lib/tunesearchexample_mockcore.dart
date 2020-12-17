@@ -1,13 +1,15 @@
 library tunesearchexample_mockcore;
 
 import 'package:tunesearchexample_core_ports/tunesearchexample_core_ports.dart';
+import 'package:tunesearchexample_mockcore/concrete_track.dart';
+import 'package:tunesearchexample_mockcore/concrete_track_collection.dart';
 
 class MockSearchTracksCommand implements AbstractSearchTracksCommand {
   @override
-  Future<List<CollectionEntity>> execute({SearchTracksDTO inDTO}) async {
+  Future<List<ConcreteTrackCollection>> execute({SearchTerm inDTO}) async {
     return [
-      CollectionEntity(name: "From Here to Now to You", tracks: [
-        TrackEntity(
+      ConcreteTrackCollection(name: "From Here to Now to You", tracks: [
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "From Here to Now to You",
             trackName: "I Got You",
@@ -15,7 +17,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/87/00/83/8700835d-d21f-d862-d816-62966095521e/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "From Here to Now to You",
             trackName: "You Remind Me of You",
@@ -23,7 +25,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/87/00/83/8700835d-d21f-d862-d816-62966095521e/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "From Here to Now to You",
             trackName: "Home",
@@ -32,10 +34,10 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/87/00/83/8700835d-d21f-d862-d816-62966095521e/source/100x100bb.jpg"),
       ]),
-      CollectionEntity(
+      ConcreteTrackCollection(
           name: "In Between Dreams (Bonus Track Version)",
           tracks: [
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName: "In Between Dreams (Bonus Track Version)",
                 trackName: "Better Together",
@@ -43,7 +45,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/24/46/97/24469731-f56f-29f6-67bd-53438f59ebcb/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName: "In Between Dreams (Bonus Track Version)",
                 trackName: "Never Know",
@@ -51,7 +53,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/24/46/97/24469731-f56f-29f6-67bd-53438f59ebcb/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName: "In Between Dreams (Bonus Track Version)",
                 trackName: "Banana Pancakes",
@@ -59,7 +61,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/24/46/97/24469731-f56f-29f6-67bd-53438f59ebcb/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName: "In Between Dreams (Bonus Track Version)",
                 trackName: "Good People",
@@ -67,7 +69,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/24/46/97/24469731-f56f-29f6-67bd-53438f59ebcb/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName: "In Between Dreams (Bonus Track Version)",
                 trackName: "No Other Way",
@@ -75,7 +77,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/24/46/97/24469731-f56f-29f6-67bd-53438f59ebcb/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName: "In Between Dreams (Bonus Track Version)",
                 trackName: "Staple It Together",
@@ -83,7 +85,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/24/46/97/24469731-f56f-29f6-67bd-53438f59ebcb/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName: "In Between Dreams (Bonus Track Version)",
                 trackName: "Situations",
@@ -91,7 +93,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/24/46/97/24469731-f56f-29f6-67bd-53438f59ebcb/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName: "In Between Dreams (Bonus Track Version)",
                 trackName: "Crying Shame",
@@ -99,7 +101,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/24/46/97/24469731-f56f-29f6-67bd-53438f59ebcb/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName: "In Between Dreams (Bonus Track Version)",
                 trackName: "If I Could",
@@ -107,7 +109,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/24/46/97/24469731-f56f-29f6-67bd-53438f59ebcb/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName: "In Between Dreams (Bonus Track Version)",
                 trackName: "Breakdown",
@@ -115,7 +117,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/24/46/97/24469731-f56f-29f6-67bd-53438f59ebcb/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName: "In Between Dreams (Bonus Track Version)",
                 trackName: "Belle",
@@ -123,7 +125,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/24/46/97/24469731-f56f-29f6-67bd-53438f59ebcb/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName: "In Between Dreams (Bonus Track Version)",
                 trackName: "Do You Remember",
@@ -131,7 +133,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/24/46/97/24469731-f56f-29f6-67bd-53438f59ebcb/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName: "In Between Dreams (Bonus Track Version)",
                 trackName: "Constellations",
@@ -139,7 +141,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/24/46/97/24469731-f56f-29f6-67bd-53438f59ebcb/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName: "In Between Dreams (Bonus Track Version)",
                 trackName: "Constellations",
@@ -148,11 +150,11 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 artworkUrl:
                 "https://is2-ssl.mzstatic.com/image/thumb/Music118/v4/24/46/97/24469731-f56f-29f6-67bd-53438f59ebcb/source/100x100bb.jpg"),
           ]),
-      CollectionEntity(
+      ConcreteTrackCollection(
           name:
           "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
           tracks: [
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName:
                 "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
@@ -161,7 +163,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName:
                 "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
@@ -170,7 +172,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName:
                 "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
@@ -179,7 +181,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName:
                 "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
@@ -188,7 +190,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName:
                 "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
@@ -197,7 +199,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName:
                 "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
@@ -206,7 +208,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName:
                 "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
@@ -215,7 +217,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName:
                 "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
@@ -224,7 +226,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName:
                 "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
@@ -233,7 +235,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName:
                 "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
@@ -242,7 +244,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName:
                 "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
@@ -251,7 +253,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName:
                 "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
@@ -260,7 +262,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName:
                 "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
@@ -269,7 +271,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 discNumber: 1,
                 artworkUrl:
                 "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/100x100bb.jpg"),
-            TrackEntity(
+            ConcreteTrack(
                 artistName: "Jack Johnson",
                 collectionName:
                 "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
@@ -279,8 +281,8 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
                 artworkUrl:
                 "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/be/38/d0/be38d058-31ed-c0ea-91e6-12052865fd20/source/100x100bb.jpg"),
           ]),
-      CollectionEntity(name: "Sleep Through the Static", tracks: [
-        TrackEntity(
+      ConcreteTrackCollection(name: "Sleep Through the Static", tracks: [
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "Sleep Through the Static",
             trackName: "Angel",
@@ -288,7 +290,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/49/09/ff/4909ffd6-9051-c729-7761-3dfcc183333c/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "Sleep Through the Static",
             trackName: "If I Had Eyes",
@@ -296,7 +298,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/49/09/ff/4909ffd6-9051-c729-7761-3dfcc183333c/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "Sleep Through the Static",
             trackName: "Same Girl",
@@ -304,7 +306,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/49/09/ff/4909ffd6-9051-c729-7761-3dfcc183333c/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "Sleep Through the Static",
             trackName: "What You Thought You Need",
@@ -312,7 +314,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/49/09/ff/4909ffd6-9051-c729-7761-3dfcc183333c/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "Sleep Through the Static",
             trackName: "Go On",
@@ -321,8 +323,8 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/49/09/ff/4909ffd6-9051-c729-7761-3dfcc183333c/source/100x100bb.jpg"),
       ]),
-      CollectionEntity(name: "To the Sea (Bonus Track Version)", tracks: [
-        TrackEntity(
+      ConcreteTrackCollection(name: "To the Sea (Bonus Track Version)", tracks: [
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "To the Sea (Bonus Track Version)",
             trackName: "You and Your Heart",
@@ -330,7 +332,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/42/24/53/422453e1-9a78-34e6-6491-3c54469c28ec/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "To the Sea (Bonus Track Version)",
             trackName: "To the Sea",
@@ -338,7 +340,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/42/24/53/422453e1-9a78-34e6-6491-3c54469c28ec/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "To the Sea (Bonus Track Version)",
             trackName: "No Good With Faces",
@@ -346,7 +348,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/42/24/53/422453e1-9a78-34e6-6491-3c54469c28ec/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "To the Sea (Bonus Track Version)",
             trackName: "At Or With Me",
@@ -354,7 +356,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/42/24/53/422453e1-9a78-34e6-6491-3c54469c28ec/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "To the Sea (Bonus Track Version)",
             trackName: "When I Look Up",
@@ -362,7 +364,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/42/24/53/422453e1-9a78-34e6-6491-3c54469c28ec/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "To the Sea (Bonus Track Version)",
             trackName: "From the Clouds",
@@ -370,7 +372,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/42/24/53/422453e1-9a78-34e6-6491-3c54469c28ec/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "To the Sea (Bonus Track Version)",
             trackName: "My Little Girl",
@@ -378,7 +380,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/42/24/53/422453e1-9a78-34e6-6491-3c54469c28ec/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "To the Sea (Bonus Track Version)",
             trackName: "Turn Your Love",
@@ -386,7 +388,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/42/24/53/422453e1-9a78-34e6-6491-3c54469c28ec/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "To the Sea (Bonus Track Version)",
             trackName: "The Upsetter",
@@ -394,7 +396,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/42/24/53/422453e1-9a78-34e6-6491-3c54469c28ec/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "To the Sea (Bonus Track Version)",
             trackName: "Red Wine, Mistakes, Mythology",
@@ -402,7 +404,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/42/24/53/422453e1-9a78-34e6-6491-3c54469c28ec/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "To the Sea (Bonus Track Version)",
             trackName: "Pictures of People Taking Pictures",
@@ -410,7 +412,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/42/24/53/422453e1-9a78-34e6-6491-3c54469c28ec/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "To the Sea (Bonus Track Version)",
             trackName: "Anything But the Truth",
@@ -418,7 +420,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/42/24/53/422453e1-9a78-34e6-6491-3c54469c28ec/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "To the Sea (Bonus Track Version)",
             trackName: "Only the Ocean",
@@ -426,7 +428,7 @@ class MockSearchTracksCommand implements AbstractSearchTracksCommand {
             discNumber: 1,
             artworkUrl:
             "https://is5-ssl.mzstatic.com/image/thumb/Music118/v4/42/24/53/422453e1-9a78-34e6-6491-3c54469c28ec/source/100x100bb.jpg"),
-        TrackEntity(
+        ConcreteTrack(
             artistName: "Jack Johnson",
             collectionName: "To the Sea (Bonus Track Version)",
             trackName: "Better Together (feat. Paula Fuga)",

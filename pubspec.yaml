@@ -1,6 +1,6 @@
 name: tunesearchexample_mockcore
 description: May be used for an example project for Herberto Graça's Explicit Architecture.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/RobinNunkesser/explicitarchitecture-tunesearch-mockcore-pub
 
 environment:
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  tunesearchexample_core_ports: ^0.0.1
+  tunesearchexample_core_ports: ^0.0.2
 
 dev_dependencies:
   flutter_test:
